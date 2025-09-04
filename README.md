@@ -36,20 +36,35 @@ In the official documentation, you will find the appropriate `pip install` comma
 1.  **Installing the appropriate PyTorch for your system.**
 2.  **Installing vLLM.**
 
-An example command might look like the following (Do not use this directly; find the one suitable for your system from the official documentation):
+An example command might look like the following (Do not use this directly; find the one suitable for your system from the official documentation).
 
+**Using pip:**
 ```bash
 # Example: Installation for CUDA 12.1 with PyTorch 2.1.2
 pip install torch==2.1.2 torchvision==0.16.2 torchaudio==2.1.2 --index-url https://download.pytorch.org/whl/cu121
 pip install vllm
 ```
 
+**Using uv (Recommended for speed):**
+
+`uv` can perform the same installation, often faster, and combines the steps into a single command.If you don't have `uv` yet, you can install it via `pip install uv`.
+```bash
+# Example: The same installation for CUDA 12.1, but with uv
+uv pip install torch==2.1.2 torchvision==0.16.2 torchaudio==2.1.2 --index-url https://download.pytorch.org/whl/cu121 vllm
+```
+
 ### 2. Installing Other Dependencies
 
-The project's other dependencies are listed in the `requirements.txt` file. Install them using the following command, which will handle the installation of both `langchain` and `langchain-openai`:
+The project's other dependencies (`langchain` and `langchain-openai`) are listed in the `requirements.txt` file.
 
+You can install them with `pip`:
 ```bash
 pip install -r requirements.txt
+```
+
+Alternatively, for a much faster installation, you can use `uv`. 
+```bash
+uv pip install -r requirements.txt
 ```
 
 ## Running the Application
