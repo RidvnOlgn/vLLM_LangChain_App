@@ -2,4 +2,5 @@
 # vLLM documentation, as their versions depend on your specific CUDA setup.
 # See README.md for more details.
 
+langchain
 langchain-openai

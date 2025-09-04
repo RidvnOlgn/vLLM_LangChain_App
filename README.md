@@ -1,6 +1,6 @@
 # vLLM and LangChain Application
 
-This project is a language model application built using the `vllm` and `langchain` libraries.
+This project is a language model application built using the `vllm`, `langchain`, and `langchain-openai` libraries.
 
 ## Requirements
 
@@ -46,13 +46,7 @@ pip install vllm
 
 ### 2. Installing Other Dependencies
 
-Install the project's other dependencies (like `langchain`). The best practice is to add these dependencies to a `requirements.txt` file.
-
-```bash
-pip install langchain
-```
-
-If you have created a `requirements.txt` file containing all dependencies, you can install them all at once:
+The project's other dependencies are listed in the `requirements.txt` file. Install them using the following command, which will handle the installation of both `langchain` and `langchain-openai`:
 
 ```bash
 pip install -r requirements.txt
